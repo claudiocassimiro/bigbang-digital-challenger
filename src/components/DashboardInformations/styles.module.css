@@ -1,0 +1,31 @@
+.container {
+  @apply absolute w-full h-screen py-12 px-8 bg-slate-200 overflow-hidden;
+}
+
+.header {
+  @apply flex justify-between items-center w-full max-w-5xl m-auto text-black;
+}
+
+.title {
+  @apply text-lg font-bold md:text-4xl;
+}
+
+.subtitle {
+  @apply text-sm md:md:text-lg;
+}
+
+.containerIcons {
+  @apply flex justify-around gap-1;
+}
+
+.wrapper {
+  @apply p-1 border border-gray-600 rounded shadow-md;
+}
+
+.icon {
+  @apply text-base md:text-2xl;
+}
+
+.containerInfos {
+  @apply flex flex-wrap justify-center gap-6 items-center w-full h-full max-w-5xl m-auto mt-8 overflow-scroll md:overflow-auto;
+}
