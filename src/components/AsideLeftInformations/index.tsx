@@ -4,7 +4,17 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export function AsideLeftInformations({ showAsideBar, setShowAsideBar }: any) {
+interface AsideLeftInformationsProps {
+  showAsideBar: boolean;
+  setShowAsideBar: (value: boolean) => void;
+  setSelectedMenuItem: (value: string) => void;
+}
+
+export function AsideLeftInformations({
+  showAsideBar,
+  setShowAsideBar,
+  setSelectedMenuItem,
+}: AsideLeftInformationsProps) {
   const menuItems = [
     "Painel",
     "Projetos",
@@ -39,7 +49,14 @@ export function AsideLeftInformations({ showAsideBar, setShowAsideBar }: any) {
           <ul className={styles.menuItemsContainer}>
             {menuItems.map((item) => {
               return (
-                <li key={item} className={styles.menuItem}>
+                <li
+                  key={item}
+                  onClick={() => {
+                    setSelectedMenuItem(item);
+                    setShowAsideBar(false);
+                  }}
+                  className={styles.menuItem}
+                >
                   {item}
                 </li>
               );

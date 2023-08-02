@@ -1,3 +1,7 @@
 .container {
-  @apply flex justify-between;
+  @apply flex justify-between relative h-screen;
+}
+
+.positionAux {
+  @apply absolute top-0 w-full z-10;
 }

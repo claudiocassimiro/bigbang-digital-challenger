@@ -1,0 +1,7 @@
+.infoWrapper {
+  @apply flex flex-col w-2/5 pt-2 pb-16 px-4 bg-slate-300 rounded;
+}
+
+.info {
+  @apply w-24 h-4 rounded-xl bg-white mb-4;
+}
